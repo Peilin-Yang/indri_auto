@@ -14,5 +14,5 @@
   * `corpus_types`: the corresponding corpus types for `allowed_corpus`.
   * `mem_use_gb`: the memory will be allocated for those corpora.
   
-  
+  *Please note that the `allowed_corpus`, `corpus_types` and `mem_use_gb` are coorelated.*  
 
