@@ -16,3 +16,5 @@
   
   *Please note that the `allowed_corpus`, `corpus_types` and `mem_use_gb` are coorelated.*  
 
+4. `nohup bash build_indri_index_all.sh &`
+
