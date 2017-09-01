@@ -2,13 +2,15 @@
 
 indri_root=''
 base_para_fn='index_builder'
-corpora_root='/tuna1/collections/newswire/'
-output_index_root='/tuna1/scratch/yangpeilyn/Indri/index/'
-log_root='/tuna1/scratch/yangpeilyn/Indri/index.logs/'
-allowed_corpus=(wt2g disk12)
-corpus_types=(trecweb trectext)
-mem_use_gb=(2 3)
-#para_fns=(disk12 disk45 aquaint wt2g wt10g gov2)
+corpora_root='add/your/corpora/root/here'
+output_index_root='/add/your/output/root/here'
+log_root='/add/your/logs/root/here'
+allowed_corpus=(gov2 cw09)
+corpus_types=(trecweb warc)
+mem_use_gb=(300 500)
+#para_fns=(disk12 disk45 aquaint wt2g wt10g gov2 cw09)
+#corpus_types=(trectext trectext trectext trecweb trecweb trecweb warc)
+#mem_use_gb=(4 4 8 4 20 300 500)
 mkdir -p $output_index_root
 for k in {1..2} # we run each setting 3 times...
 do
