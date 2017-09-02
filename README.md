@@ -6,7 +6,7 @@
 
 2. `git clone https://github.com/Peilin-Yang/indri_auto.git`
 
-3. Modify whatever applies to you in `build_indri_index_all.sh`. Specifically,
+3. Uncomment the following variables and modify them in `build_indri_index_all.sh`. Specifically,
   * `corpora_root`: the path(folder) of the collections
   * `output_index_root`: where to put the index
   * `log_root`: where to put the logs
