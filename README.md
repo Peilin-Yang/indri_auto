@@ -10,8 +10,8 @@
   * `corpora_root`: the path(folder) of the collections
   * `output_index_root`: where to put the index
   * `log_root`: where to put the logs
-  * `allowed_corpus`: names of the corpora folde that will be indexed. the rest of the folders will be ignored.
-  * `corpus_types`: the corresponding corpus types for `allowed_corpus`.
+  * `allowed_corpus`: names of the corpora folder that will be indexed. the rest of the folders(collections) will not be indexed.
+  * `corpus_types`: the corresponding corpus types for `allowed_corpus`. must be one of (`trectext`, `trecweb`, `warc`)
   * `mem_use_gb`: the memory will be allocated for those corpora.
   
   *Please note that the `allowed_corpus`, `corpus_types` and `mem_use_gb` are coorelated.*  
