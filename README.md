@@ -1,4 +1,4 @@
-# Indexing
+### Indexing
 1. Download the latest version of Indri from: https://sourceforge.net/projects/lemur/files/lemur/ 
   * `./configure --prefix=/your/own/path/`
   * `make`
@@ -18,3 +18,5 @@
 
 4. `nohup bash build_indri_index_all.sh &`
 
+### Print Indexing Efficiency Results
+`python efficiency_cal.py --log_root /the/log/folder/of/the/indexing/ --type index`
