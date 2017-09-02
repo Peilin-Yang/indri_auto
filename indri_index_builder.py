@@ -1,6 +1,7 @@
 from __future__ import print_function, absolute_import, division
 
 import os, sys
+import shutil
 import datetime
 import subprocess
 import argparse
@@ -31,8 +32,13 @@ def get_name_from_path(path):
 
 def build(args):
     mkdir(args.log_root)
-
+    mkdir(args.index_root)
     corpus_name = get_name_from_path(args.corpus_root)
+    output_index_path = os.path.join(args.index_root, corpus_name)
+    if os.path.isfile(output_index_path):
+        os.remove(output_index_path)
+    if os.path.isdir(output_index_path):
+        shutil.rmtree(output_index_path)
     binary_fp = os.path.join(args.indri_root, binary)
     command = [binary_fp, args.build_para_fn]
     command.append( '-index=%s' % (os.path.join(args.index_root, corpus_name)) )

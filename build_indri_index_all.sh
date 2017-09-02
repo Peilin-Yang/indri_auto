@@ -11,12 +11,10 @@ mem_use_gb=(300 500)
 #para_fns=(disk12 disk45 aquaint wt2g wt10g gov2 cw09)
 #corpus_types=(trectext trectext trectext trecweb trecweb trecweb warc)
 #mem_use_gb=(4 4 8 4 20 300 500)
-mkdir -p $output_index_root
 for k in {1..2} # we run each setting 3 times...
 do
     for (( i=0; i<${#allowed_corpus[*]}; i++ ))
     do
-        rm -rf $output_index_root$allowed_corpus[$i]
         python indri_index_builder.py \
          --indri_root "$indri_root" \
          --build_para_fn "$base_para_fn"\
