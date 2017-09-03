@@ -1,11 +1,11 @@
 #!/bin/sh
 
-anserini_root=''
-index_root='/tuna1/scratch/yangpeilyn/Anserini/index'
-log_root='/tuna1/scratch/yangpeilyn/Anserini/index.logs'
-corpora_root='/tuna1/collections/web/gov2/'
-corpora=(disk12 disk45 AQUAINT wt2g)
-ctypes=(Trec Trec Trec Wt)
+anserini_root='/anserini/repo/root/'
+index_root='/output/index/root/'
+log_root='/logs/root/'
+corpora_root='/corpora/root/'
+corpora=(disk12 disk45 AQUAINT wt2g gov2)
+ctypes=(Trec Trec Trec Wt Gov2)
 for c in {1..3} 
 do
     if [ $c -eq 1 ]; then

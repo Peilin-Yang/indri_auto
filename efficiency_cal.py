@@ -60,8 +60,9 @@ def cal_efficiency(args):
             if duration > 0:
                 all_stats[k].append(duration)
     if args.type == 'index':
+        print('collection', 'iter_times', 'mean', 'std')
         for collection in sorted(all_stats):
-            print(collection, '%s'%str(datetime.timedelta(seconds=round(mean(all_stats[collection]), 0))), '%.1f'%pstdev(all_stats[collection]))
+            print(collection, len(all_stats[collection]), '%s'%str(datetime.timedelta(seconds=round(mean(all_stats[collection]), 0))), '%.1f'%pstdev(all_stats[collection]))
     if args.type == 'ranking':
         final_stats = {}
         for k in all_stats:
