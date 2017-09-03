@@ -25,7 +25,7 @@ def get_duration(fn, _type='index'):
         elif _type == 'ranking':
             return int(t[0])*3600 + int(t[1])*60 + int(t[2])
     except:
-        print('Something wrong with file:%s' % fn)
+        print('Something wrong with log file:%s' % fn)
         return -1
  
 def mean(data):
