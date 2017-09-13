@@ -22,9 +22,9 @@ def batch_rank(args, iter_n=3):
     mkdir(args.output_root)
     mkdir(args.log_root)
 
-    for topic_fn in os.listdir(args.topics_root): 
-        for model in models:
-            for i in range(iter_n):
+    for i in range(iter_n):
+        for topic_fn in os.listdir(args.topics_root): 
+            for model in models:
                 command = [binary, os.path.join(args.topics_root, topic_fn), '-index=%s' % os.path.abspath(os.path.join(args.index_root, topic_fn)), '-rule=method:%s' % model]
                 log_path = os.path.join(args.log_root, topic_fn+'.'+model+'.%d'%i)
                 res_fp = open(os.path.join(args.output_root, topic_fn+'.'+model), "w")
